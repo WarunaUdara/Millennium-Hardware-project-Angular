@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Contact</th>
+        <th scope="col">City</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of objectList; index as i">
+        <td>{{i+1}}</td>
+        <td>{{customer.id}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.contact}}</td>
+        <td>{{customer.city}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="removeCustomer(customer)"><i class="bi bi-trash-fill"></i></button></td>
+        <td><button type="button" class="btn btn-dark"  (click)="updateCustomer()"><i class="bi bi-pencil-square"></i></button></td>
+        
+        
+      </tr>
+
+    </tbody>
+  </table>
