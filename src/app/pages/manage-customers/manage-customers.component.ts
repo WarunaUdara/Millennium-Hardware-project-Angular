@@ -28,8 +28,6 @@ export class ManageCustomersComponent {
     this.http.delete("http://localhost:8080/customer/"+customer.id).subscribe(
       (response) => {
         obj=response
-        console.log(obj.isDeletedSuccessful);
-        
         if(obj.isDeletedSuccessful==true){
         
           Swal.fire({
